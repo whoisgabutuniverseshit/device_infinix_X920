@@ -117,5 +117,8 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 # Recovery
 BOARD_USES_RECOVERY_AS_BOOT := true
 
+# RIL
+ENABLE_VENDOR_RIL_SERVICE := true
+
 # Inherit the proprietary files
 include vendor/infinix/X920/BoardConfigVendor.mk
