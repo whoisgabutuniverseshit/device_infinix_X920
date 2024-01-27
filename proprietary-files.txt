@@ -422,3 +422,10 @@ vendor/firmware/soc5_0_ram_mcu_1_1_hdr.bin
 vendor/firmware/soc5_0_ram_wmmcu_1_1_hdr.bin
 vendor/firmware/wifi.cfg
 vendor/firmware/WIFI_RAM_CODE_soc5_0_1_1.bin
+
+# Fuelgauged
+vendor/bin/fuelgauged
+vendor/bin/fuelgauged_nvram
+vendor/etc/init/fuelgauged_init.rc
+vendor/etc/init/fuelgauged_nvram_init.rc
+vendor/lib/libfgauge_gm30.so
