@@ -1396,6 +1396,10 @@ vendor/lib64/libforkexecwrap.so
 vendor/lib64/libifcutils_mtk.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 
+# Soundtrigger
+vendor/lib/hw/sound_trigger.primary.default.so:vendor/lib/hw/sound_trigger.primary.mt6877.so
+vendor/lib64/hw/sound_trigger.primary.default.so:vendor/lib64/hw/sound_trigger.primary.mt6877.so
+
 # Thermal
 vendor/bin/hw/android.hardware.thermal@2.0-service.mtk
 vendor/bin/thermal
