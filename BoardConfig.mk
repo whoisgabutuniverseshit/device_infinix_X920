@@ -7,6 +7,18 @@
 DEVICE_PATH := device/infinix/X920
 KERNEL_PATH := $(DEVICE_PATH)-kernel
 
+# A/B
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS += \
+    boot\
+    product \
+    system \
+    system_ext \
+    vbmeta \
+    vbmeta_system \
+    vbmeta_vendor \
+    vendor
+	
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a
@@ -101,6 +113,9 @@ VENDOR_SECURITY_PATCH := 2023-07-05
 
 # VINTF
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
+
+# Recovery
+BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Inherit the proprietary files
 include vendor/infinix/X920/BoardConfigVendor.mk
