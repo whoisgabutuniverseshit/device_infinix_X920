@@ -7,6 +7,10 @@
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 31
 
+# Kernel
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)-kernel/kernel:kernel
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
