@@ -175,36 +175,6 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor \
     libtextclassifier_hash.vendor
 
-# Overlays
-PRODUCT_ENFORCE_RRO_TARGETS := *
-
-# Partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
-# Rootdir
-PRODUCT_PACKAGES += \
-    init.insmod.sh \
-    init.tran_mfc.sh
-
-PRODUCT_PACKAGES += \
-    fstab.mt6877 \
-    init.cgroup.rc \
-    init.connectivity.common.rc \
-    init.connectivity.rc \
-    init.modem.rc \
-    init.mt6877.rc \
-    init.mt6877.usb.rc \
-    init.project.rc \
-    init.target.rc \
-    init.sensor_2_0.rc \
-    init_conninfra.rc 
-
-PRODUCT_PACKAGES += \
-    init.recovery.mt6877.rc
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6877:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.mt6877
-
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail_vendor \
@@ -237,6 +207,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
     $(LOCAL_PATH)/configs/nfc/libnfc-slm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-slm.conf \
     $(LOCAL_PATH)/configs/nfc/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/libnfc-nxp_RF.conf
+
+# Overlays
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
+# Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -321,6 +297,30 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
+
+# Rootdir
+PRODUCT_PACKAGES += \
+    init.insmod.sh \
+    init.tran_mfc.sh
+
+PRODUCT_PACKAGES += \
+    fstab.mt6877 \
+    init.cgroup.rc \
+    init.connectivity.common.rc \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6877.rc \
+    init.mt6877.usb.rc \
+    init.project.rc \
+    init.target.rc \
+    init.sensor_2_0.rc \
+    init_conninfra.rc 
+
+PRODUCT_PACKAGES += \
+    init.recovery.mt6877.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt6877:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.mt6877
 
 # Secure Element
 PRODUCT_PACKAGES += \
